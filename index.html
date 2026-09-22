@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>Beetle Search - Study Timer</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <h1>Study Timer</h1>
+    <!-- presets -->
+    <div id="presets">
+        <button id="quickSearch" onclick="quickSearch()">Quick Search!</button>
+        <button id="mediumSearch" onclick="mediumSearch()">Medium Search!</button>
+        <button id="longerSearch" onclick="longerSearch()">Longer Search!</button>
+    </div>
+    <p id="countdown">
+        0:00:00
+    </p>
+    <!-- start button is changed to CONTINUE button once timer is detected to be paused -->
+    <div id="buttons">
+        <button id="startbtn" onclick="startTimer()">Start</button>
+        <button id="pausebtn" onclick="pauseTimer()">Pause</button>
+        <button id="cancelbtn" onclick="cancelTimer()">Cancel</button>
+        <button id="continuebtn" onclick="continueTimer()">Continue</button>
+    </div>
+  </body>
+    <script src="./renderer.js"></script>
+</html>
